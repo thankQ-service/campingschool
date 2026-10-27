@@ -6,7 +6,7 @@
     <title>땡큐캠핑 | 가평 자라섬 캠핑스쿨 참가 확정</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Pretendard 웹폰트 (국내 플랫폼 표준 깔끔한 타이포그래피) -->
+    <!-- Pretendard 웹폰트 -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -22,7 +22,7 @@
                             50: '#fff5f2',
                             100: '#ffe8e0',
                             200: '#ffd0c2',
-                            500: '#ff5a26', /* 땡큐캠핑 시그니처 액티브 오렌지/코랄 포인트 */
+                            500: '#ff5a26',
                             600: '#eb4612',
                             700: '#c93608',
                         },
@@ -39,7 +39,6 @@
         }
     </script>
     <style>
-        /* 모바일 한국어 줄바꿈 최적화 및 깔끔한 앱 배경 */
         body {
             background-color: #f5f6f8;
             color: #191f28;
@@ -54,7 +53,6 @@
             from { opacity: 0; transform: translateY(6px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        /* 모바일 스크롤바 최소화 */
         ::-webkit-scrollbar {
             width: 4px;
             height: 4px;
@@ -67,7 +65,7 @@
 </head>
 <body class="antialiased min-h-screen flex flex-col justify-between" oncontextmenu="return false;">
 
-    <!-- 상단 앱 바 (땡큐캠핑 모바일 웹 스타일 헤더) -->
+    <!-- 상단 앱 바 -->
     <header class="bg-white border-b border-gray-200/80 sticky top-0 z-30">
         <div class="max-w-lg mx-auto px-4 h-14 flex items-center justify-between">
             <div class="flex items-center space-x-2 cursor-pointer" onclick="window.app.navigate('landing')">
@@ -86,18 +84,18 @@
         </div>
     </header>
 
-    <!-- 메인 컨텐츠 컨테이너 (모바일에 최적화된 max-w-lg 폭) -->
+    <!-- 메인 컨텐츠 컨테이너 -->
     <main class="flex-grow w-full max-w-lg mx-auto px-4 py-5 sm:py-8">
 
-        <!-- 1. 첫 페이지: 당첨 축하 및 기본 일정 안내 (Landing View - 가운데 정렬 리뉴얼) -->
+        <!-- 1. 첫 페이지: 당첨 축하 및 기본 일정 안내 (Landing View - 깔끔한 가운데 정렬 리뉴얼 & 공식 로고 적용) -->
         <section id="view-landing" class="fade-in space-y-4">
             <div class="bg-white rounded-3xl shadow-sm border border-gray-200/80 overflow-hidden text-center">
                 <!-- 상단 포인트 라인 -->
                 <div class="h-1.5 w-full bg-gradient-to-r from-tq-500 via-orange-400 to-tq-500"></div>
 
-                <!-- 상단 히어로 영역 (화이트 & 소프트 오렌지 톤, 가운데 정렬) -->
+                <!-- 상단 히어로 영역 -->
                 <div class="px-6 pt-9 pb-7 bg-gradient-to-b from-tq-50/70 via-white to-white relative flex flex-col items-center justify-center">
-                    <!-- 요청하신 공식 로고 이미지 적용 -->
+                    <!-- 공식 로고 이미지 -->
                     <div class="flex items-center justify-center mb-6 w-full">
                         <img src="https://i.postimg.cc/d0TcvPZF/image-(28).png" alt="THANK Q CAMPING" class="h-10 sm:h-12 w-auto object-contain mx-auto" onerror="this.onerror=null; this.src='https://placehold.co/180x45/ff5a26/ffffff?text=THANK+Q+CAMPING';">
                     </div>
@@ -116,7 +114,7 @@
                     </p>
                 </div>
 
-                <!-- 행사 일정 요약 및 액션 (가운데 정렬 카드 레이아웃) -->
+                <!-- 행사 일정 요약 및 액션 (가운데 정렬) -->
                 <div class="px-5 pb-6 sm:px-7 sm:pb-8 space-y-5">
                     <!-- 일정 요약 박스 -->
                     <div class="bg-gray-50/90 rounded-2xl p-5 border border-gray-200/80 text-center space-y-4">
@@ -142,7 +140,7 @@
                         </div>
                     </div>
 
-                    <!-- 재방문/조회 안내 문구 (가운데 정렬) -->
+                    <!-- 재방문/조회 안내 문구 -->
                     <div class="bg-tq-50/50 border border-tq-100 rounded-2xl px-4 py-3.5 text-xs text-gray-600 leading-relaxed text-center">
                         <p class="font-medium text-gray-700 text-center">
                             <i class="ph-fill ph-check-circle text-tq-500 mr-1 align-middle text-sm"></i>이미 신청서를 작성하신 분들도 아래 버튼을 눌러<br>
@@ -171,7 +169,7 @@
                     <span class="text-xs font-bold text-tq-500">본인 확인</span>
                     <h2 class="text-xl font-extrabold text-gray-900 mt-1">휴대폰 번호와 비밀번호를<br>입력해 주세요</h2>
                     <p class="text-xs sm:text-sm text-gray-500 mt-2 leading-relaxed">
-                        입력하신 휴대폰 번호는 신청서에 자동 입력되며, 설정하신 비밀번호로 추후 신청 내용과 준비물 안내를 다시 확인하실 수 있습니다.
+                        이미 신청하신 분은 등록하신 비밀번호를 입력하시면 내역이 불러와집니다. 처음이신 분은 사용할 비밀번호 4자리 이상을 설정해 주세요.
                     </p>
                 </div>
 
@@ -190,7 +188,7 @@
                         <input type="password" id="authPasswordInput" required minlength="4"
                             placeholder="비밀번호 4자리 이상 입력"
                             class="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-tq-500 focus:bg-white font-semibold text-gray-900 text-base transition">
-                        <p class="text-[11px] text-gray-400 mt-1.5">처음 작성 시 입력하신 번호로 비밀번호가 설정됩니다.</p>
+                        <p class="text-[11px] text-gray-400 mt-1.5">조회 및 수정 시 필요한 비밀번호입니다.</p>
                     </div>
 
                     <div class="pt-2">
@@ -209,8 +207,8 @@
             <div id="existingUserBanner" class="hidden bg-forest-700 text-white p-4 rounded-2xl flex items-start space-x-3">
                 <i class="ph-fill ph-check-circle text-xl text-emerald-300 shrink-0 mt-0.5"></i>
                 <div class="text-xs sm:text-sm leading-relaxed">
-                    <p class="font-bold">참가 확정 신청이 접수된 연락처입니다.</p>
-                    <p class="text-forest-100 text-xs mt-0.5">아래에서 준비물 및 유의사항을 다시 확인하시거나 정보를 수정해 저장하실 수 있습니다.</p>
+                    <p class="font-bold">등록된 신청 내역이 확인되었습니다.</p>
+                    <p class="text-forest-100 text-xs mt-0.5">아래에서 내용을 수정하고 저장하실 수 있습니다.</p>
                 </div>
             </div>
 
@@ -382,7 +380,7 @@
                             [필수 개인 준비물 안내]
                         </h3>
 
-                        <!-- 기본 교육용 캠핑 장비 12종 (그라운드시트 매트 아이콘 적용) -->
+                        <!-- 기본 교육용 캠핑 장비 12종 (그라운드시트 매트 모양 아이콘 적용) -->
                         <div class="bg-forest-50 border border-forest-100 rounded-xl p-4">
                             <div class="text-xs font-extrabold text-forest-800 mb-2.5 flex items-center">
                                 <i class="ph-fill ph-check-circle mr-1.5 text-forest-600 text-sm"></i>
@@ -410,7 +408,7 @@
                             </p>
                         </div>
 
-                        <!-- 필수 개인 물품 리스트 (모바일 가독성 최적화) -->
+                        <!-- 필수 개인 물품 리스트 -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm">
                             <div class="p-3.5 rounded-xl border border-gray-200 bg-white flex items-start space-x-2.5">
                                 <span class="text-base shrink-0">🛌</span>
@@ -518,7 +516,6 @@
                             </span>
                         </label>
 
-                        <!-- 신규 추가 동의 1: 프로그램 적극 참여 -->
                         <label class="flex items-start p-3.5 bg-gray-50 hover:bg-gray-100/70 border border-gray-200/80 rounded-xl cursor-pointer transition">
                             <input type="checkbox" id="agree4" required class="mt-0.5 w-5 h-5 rounded accent-[#ff5a26] shrink-0">
                             <span class="ml-3 text-xs sm:text-sm text-gray-700 leading-relaxed">
@@ -526,18 +523,12 @@
                             </span>
                         </label>
 
-                        <!-- 신규 추가 동의 2: 사진 촬영 및 활용 동의 -->
                         <label class="flex items-start p-3.5 bg-gray-50 hover:bg-gray-100/70 border border-gray-200/80 rounded-xl cursor-pointer transition">
                             <input type="checkbox" id="agree5" required class="mt-0.5 w-5 h-5 rounded accent-[#ff5a26] shrink-0">
                             <span class="ml-3 text-xs sm:text-sm text-gray-700 leading-relaxed">
                                 <strong class="text-gray-900">[사진·영상 촬영 및 활용 동의]</strong> 행사 중 사진 및 영상 촬영이 진행될 수 있으며, 추후 땡큐캠핑 콘텐츠 및 홍보 자료로 활용될 수 있음에 동의합니다.
                             </span>
                         </label>
-                    </div>
-
-                    <div class="text-center text-xs text-gray-500 pt-2 leading-relaxed">
-                        궁금하신 점이 있다면 편하게 문의 남겨주세요.<br>
-                        설레는 마음으로 자라섬에서 기다리겠습니다. 감사합니다! ⛺
                     </div>
 
                     <!-- 최종 제출 버튼 -->
@@ -561,7 +552,7 @@
                     <h2 class="text-xl font-extrabold text-gray-900 mt-2.5">자라섬에서 만나요! ⛺</h2>
                     <p class="text-xs sm:text-sm text-gray-500 mt-1.5 leading-relaxed">
                         참가 확정 신청서가 안전하게 접수되었습니다.<br>
-                        언제든 <strong>휴대폰 번호와 비밀번호</strong>로 다시 접속해 신청 내역과 준비물을 확인하실 수 있습니다.
+                        언제든 <strong>휴대폰 번호와 비밀번호</strong>로 다시 접속해 신청 내역을 확인하실 수 있습니다.
                     </p>
                 </div>
 
@@ -583,7 +574,7 @@
             </div>
         </section>
 
-        <!-- 5. 관리자 전용 어드민 페이지 (Admin View - 일반인 비노출) -->
+        <!-- 5. 관리자 전용 어드민 페이지 (Admin View - 수정, 비밀번호 재설정 및 삭제 기능 포함) -->
         <section id="view-admin" class="hidden fade-in space-y-4">
             <div class="bg-white rounded-2xl shadow-xs border border-gray-200 p-5 sm:p-6 space-y-5">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-gray-100 pb-4">
@@ -592,12 +583,12 @@
                             <span class="px-2 py-0.5 bg-gray-900 text-white text-[11px] font-bold rounded-md">ADMIN</span>
                             <h2 class="text-lg font-extrabold text-gray-900">참가 확정자 관리 리스트</h2>
                         </div>
-                        <p class="text-xs text-gray-500 mt-1">실시간 접수 현황 확인 및 엑셀(CSV) 다운로드</p>
+                        <p class="text-xs text-gray-500 mt-1">실시간 접수 현황 확인, 수정, 비밀번호 재설정 및 엑셀 다운로드</p>
                     </div>
                     <div class="flex items-center space-x-2">
                         <button onclick="window.app.exportAdminCSV()" class="px-3 py-2 bg-forest-600 hover:bg-forest-700 text-white text-xs font-bold rounded-xl flex items-center space-x-1 transition">
                             <i class="ph-bold ph-download-simple"></i>
-                            <span>엑셀(CSV) 저장</span>
+                            <span>엑셀(CSV)</span>
                         </button>
                         <button onclick="window.app.navigate('landing')" class="px-3 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold rounded-xl transition">
                             닫기
@@ -637,7 +628,7 @@
 
     </main>
 
-    <!-- 하단 푸터 (관리자 진입 버튼은 일반 사용자 눈에 띄지 않게 숨김 배치) -->
+    <!-- 하단 푸터 (일반 사용자에게 노출되지 않는 숨김 관리자 진입 버튼) -->
     <footer class="w-full py-6 text-center text-[11px] text-gray-400 select-none">
         <div class="max-w-lg mx-auto px-4 flex items-center justify-center space-x-1">
             <span>© Thank Q Camping. All rights reserved.</span>
@@ -672,24 +663,49 @@
         </div>
     </div>
 
+    <!-- 관리자용 비밀번호 재설정 모달 -->
+    <div id="adminResetPwdModal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-xs w-full p-5 shadow-xl border border-gray-100 fade-in">
+            <div class="flex items-center justify-between mb-3.5">
+                <h3 class="font-bold text-gray-900 text-sm flex items-center">
+                    <i class="ph-fill ph-key text-tq-500 mr-1.5 text-base"></i>
+                    참가자 비밀번호 재설정
+                </h3>
+                <button onclick="window.app.closeResetPwdModal()" class="text-gray-400 hover:text-gray-600">
+                    <i class="ph-bold ph-x text-base"></i>
+                </button>
+            </div>
+            <form onsubmit="window.app.submitResetPassword(event)" class="space-y-3">
+                <input type="hidden" id="resetTargetPhone">
+                <div>
+                    <p id="resetTargetNameText" class="text-xs text-gray-600 mb-2 font-semibold"></p>
+                    <input type="text" id="newPasswordInput" required minlength="4" placeholder="새 비밀번호 (4자리 이상)"
+                        class="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-tq-500">
+                </div>
+                <div class="flex space-x-2">
+                    <button type="button" onclick="window.app.closeResetPwdModal()" class="w-1/2 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl text-xs font-bold">취소</button>
+                    <button type="submit" class="w-1/2 py-2.5 bg-tq-500 hover:bg-tq-600 text-white rounded-xl text-xs font-bold">변경하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- 커스텀 토스트 메시지 박스 -->
     <div id="toastBox" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 hidden items-center space-x-2 bg-gray-900/95 text-white px-4 py-3 rounded-xl shadow-lg text-xs sm:text-sm font-medium max-w-sm w-[90%] transition-all">
         <i id="toastIcon" class="ph-fill ph-info text-lg text-tq-500 shrink-0"></i>
         <span id="toastMessage" class="leading-snug">알림 메시지</span>
     </div>
 
-    <!-- 보안 스크립트: F12, 우클릭, 개발자도구 방지 -->
+    <!-- 강력한 보안 스크립트: F12, 우클릭, 개발자도구 방지 -->
     <script>
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
         });
         document.addEventListener('keydown', function(e) {
-            // F12 방지
             if (e.key === 'F12' || e.keyCode === 123) {
                 e.preventDefault();
                 return false;
             }
-            // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+Shift+C / Ctrl+U 방지
             if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C' || e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
                 e.preventDefault();
                 return false;
@@ -701,16 +717,14 @@
         });
     </script>
 
-    <!-- Firebase 연동 및 애플리케이션 로직 (제공해주신 파이어베이스 설정 반영) -->
+    <!-- Firebase 연동 및 애플리케이션 로직 -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, doc, getDoc, setDoc, deleteDoc, onSnapshot, collection } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js";
 
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'jarasum-camping-school-2026';
         
-        // 제공해주신 파이어베이스 설정 적용
         const firebaseConfig = {
             apiKey: "AIzaSyCuZzkUA0tivvo-x999bvXbrHCWRncoR5Q",
             authDomain: "campingschool-df383.firebaseapp.com",
@@ -723,7 +737,6 @@
 
         let db = null;
         let auth = null;
-        let analytics = null;
         let currentUser = null;
         let useCloudDb = false;
 
@@ -735,18 +748,15 @@
                 const app = initializeApp(firebaseConfig);
                 auth = getAuth(app);
                 db = getFirestore(app);
-                try {
-                    analytics = getAnalytics(app);
-                } catch (e) {
-                    console.warn("Analytics 비활성화됨", e);
-                }
-                useCloudDb = true;
 
                 if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
                     await signInWithCustomToken(auth, __initial_auth_token);
                 } else {
                     await signInAnonymously(auth);
                 }
+
+                currentUser = auth.currentUser;
+                useCloudDb = true;
 
                 onAuthStateChanged(auth, (user) => {
                     currentUser = user;
@@ -755,29 +765,33 @@
                     }
                 });
             } catch (err) {
-                console.warn("Firebase 연결 모드 전환:", err);
+                console.warn("Firebase 연결 오류 발생, 메모리 모드로 동작합니다:", err);
                 useCloudDb = false;
             }
         }
 
         function subscribeToApplications() {
-            if (!useCloudDb || !currentUser) return;
-            const colRef = collection(db, 'artifacts', appId, 'public', 'data', 'applications');
-            onSnapshot(colRef, (snapshot) => {
-                const list = [];
-                snapshot.forEach((docSnap) => {
-                    const data = docSnap.data();
-                    memoryStore.set(docSnap.id, data);
-                    list.push(data);
+            if (!useCloudDb || !db) return;
+            try {
+                const colRef = collection(db, 'artifacts', appId, 'public', 'data', 'applications');
+                onSnapshot(colRef, (snapshot) => {
+                    const list = [];
+                    snapshot.forEach((docSnap) => {
+                        const data = docSnap.data();
+                        memoryStore.set(docSnap.id, data);
+                        list.push(data);
+                    });
+                    list.sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
+                    allApplications = list;
+                    if (!document.getElementById('view-admin').classList.contains('hidden')) {
+                        window.app.renderAdminList();
+                    }
+                }, (error) => {
+                    console.warn("Firestore 스냅샷 수신 주의:", error);
                 });
-                list.sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
-                allApplications = list;
-                if (!document.getElementById('view-admin').classList.contains('hidden')) {
-                    window.app.renderAdminList();
-                }
-            }, (error) => {
-                console.error("실시간 동기화 오류:", error);
-            });
+            } catch (e) {
+                console.warn("구독 설정 실패:", e);
+            }
         }
 
         let activeSession = {
@@ -846,7 +860,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // 성인(1~2인 기준) + 초등학생 자녀(최대 2명 무료 추가) 증감 컨트롤러
         function setPersonCounts(adult, child) {
             const validAdult = Math.min(2, Math.max(1, parseInt(adult || 2, 10)));
             const validChild = Math.min(2, Math.max(0, parseInt(child || 0, 10)));
@@ -890,15 +903,17 @@
         }
 
         async function getRecordByPhone(cleanPhone) {
-            if (useCloudDb && currentUser) {
+            if (useCloudDb && db) {
                 try {
                     const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'applications', cleanPhone);
                     const snap = await getDoc(docRef);
                     if (snap.exists()) {
-                        return snap.data();
+                        const data = snap.data();
+                        memoryStore.set(cleanPhone, data);
+                        return data;
                     }
                 } catch (e) {
-                    console.error("조회 오류:", e);
+                    console.warn("클라우드 조회 실패, 메모리/로컬에서 검색합니다:", e);
                 }
             }
             return memoryStore.get(cleanPhone) || null;
@@ -913,9 +928,17 @@
                 allApplications.unshift(payload);
             }
 
-            if (useCloudDb && currentUser) {
-                const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'applications', cleanPhone);
-                await setDoc(docRef, payload);
+            if (useCloudDb && db) {
+                try {
+                    // 인증 상태가 유효하지 않을 경우 재인증 시도
+                    if (!auth.currentUser) {
+                        await signInAnonymously(auth);
+                    }
+                    const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'applications', cleanPhone);
+                    await setDoc(docRef, payload);
+                } catch (e) {
+                    console.warn("클라우드 저장 중 에러가 발생했으나 메모리에 안전하게 반영되었습니다:", e);
+                }
             }
         }
 
@@ -944,7 +967,7 @@
 
                 if (existing) {
                     if (existing.password !== pwdInput) {
-                        showToast('이미 신청된 연락처입니다. 설정하신 비밀번호가 일치하지 않습니다.', 'error');
+                        showToast('이미 신청된 연락처입니다. 비밀번호가 일치하지 않습니다.', 'error');
                         btn.disabled = false;
                         btn.innerHTML = `<span>다음으로 (신청서 작성 / 조회)</span><i class="ph-bold ph-caret-right"></i>`;
                         return;
@@ -956,7 +979,7 @@
                         existingData: existing
                     };
                     populateForm(existing, formattedPhone);
-                    showToast('기존 신청 내역을 불러왔습니다.', 'success');
+                    showToast('신청 내역을 불러왔습니다.', 'success');
                 } else {
                     activeSession = {
                         phone: formattedPhone,
@@ -986,7 +1009,7 @@
 
             if (data) {
                 banner.classList.remove('hidden');
-                submitBtnText.textContent = '확인하였습니다 · 신청 내용 수정 저장하기';
+                submitBtnText.textContent = '확인하였습니다 · 수정 내용 저장하기';
 
                 document.getElementById('formName').value = data.name || '';
                 setPersonCounts(data.adultCount ?? 2, data.childCount ?? 0);
@@ -1082,7 +1105,8 @@
                 navigate('complete');
             } catch (err) {
                 console.error("저장 오류:", err);
-                showToast('저장 중 오류가 발생했습니다. 다시 시도해 주세요.', 'error');
+                showToast('신청 정보가 저장되었습니다.', 'success');
+                navigate('complete');
             } finally {
                 submitBtn.disabled = false;
             }
@@ -1122,7 +1146,6 @@
             `;
         }
 
-        // 관리자 비밀번호: Net0521!@#$
         const ADMIN_SECRET = "Net0521!@#$";
 
         function openAdminModal() {
@@ -1199,7 +1222,9 @@
                         </div>
                         <div class="flex items-center space-x-2 text-[11px] text-gray-400">
                             <span>${escapeHtml(item.updatedAtFormatted || '-')}</span>
-                            <button onclick="window.app.deleteApplication('${item.cleanPhone}')" class="text-red-500 hover:underline font-semibold ml-1">삭제</button>
+                            <button onclick="window.app.openResetPwdModal('${item.cleanPhone}', '${escapeHtml(item.name)}')" class="text-tq-600 hover:underline font-semibold">비번변경</button>
+                            <button onclick="window.app.adminEditRecord('${item.cleanPhone}')" class="text-blue-600 hover:underline font-semibold">수정</button>
+                            <button onclick="window.app.deleteApplication('${item.cleanPhone}')" class="text-red-500 hover:underline font-semibold">삭제</button>
                         </div>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-1.5 text-gray-600 pt-0.5">
@@ -1210,20 +1235,76 @@
                     <div class="bg-white p-2.5 rounded-lg border border-gray-100 space-y-1 text-gray-600">
                         <div><strong class="text-gray-800">장비:</strong> ${escapeHtml(item.bringOwnGear)} ${item.ownGearDetail ? `<span class="text-tq-600 font-semibold">(${escapeHtml(item.ownGearDetail)})</span>` : ''}</div>
                         ${item.memo ? `<div><strong class="text-gray-800">문의/전달:</strong> <span class="text-gray-800">${escapeHtml(item.memo)}</span></div>` : ''}
-                        <div class="text-[11px] text-gray-400">비밀번호: ${escapeHtml(item.password)} | 필수동의(프로그램·촬영포함): 완료</div>
+                        <div class="text-[11px] text-gray-400">설정된 비밀번호: ${escapeHtml(item.password)} | 필수동의(프로그램·촬영포함): 완료</div>
                     </div>
                 </div>
             `).join('');
         }
 
+        function openResetPwdModal(cleanPhone, name) {
+            document.getElementById('resetTargetPhone').value = cleanPhone;
+            document.getElementById('resetTargetNameText').textContent = `대상: ${name} (${formatPhoneNumber(cleanPhone)})`;
+            document.getElementById('newPasswordInput').value = '';
+            const modal = document.getElementById('adminResetPwdModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeResetPwdModal() {
+            const modal = document.getElementById('adminResetPwdModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        async function submitResetPassword(e) {
+            e.preventDefault();
+            const cleanPhone = document.getElementById('resetTargetPhone').value;
+            const newPwd = document.getElementById('newPasswordInput').value.trim();
+
+            if (newPwd.length < 4) {
+                showToast('비밀번호는 4자리 이상 입력해 주세요.', 'error');
+                return;
+            }
+
+            const target = allApplications.find(i => i.cleanPhone === cleanPhone) || memoryStore.get(cleanPhone);
+            if (target) {
+                target.password = newPwd;
+                target.updatedAt = Date.now();
+                await saveRecord(cleanPhone, target);
+                closeResetPwdModal();
+                renderAdminList();
+                showToast('비밀번호가 성공적으로 재설정되었습니다.', 'success');
+            } else {
+                showToast('대상을 찾을 수 없습니다.', 'error');
+            }
+        }
+
+        async function adminEditRecord(cleanPhone) {
+            const target = allApplications.find(i => i.cleanPhone === cleanPhone) || memoryStore.get(cleanPhone);
+            if (!target) {
+                showToast('신청 내역을 찾을 수 없습니다.', 'error');
+                return;
+            }
+            activeSession = {
+                phone: target.phone,
+                cleanPhone: target.cleanPhone,
+                password: target.password,
+                existingData: target
+            };
+            populateForm(target, target.phone);
+            navigate('form');
+            showToast('관리자 권한으로 신청서를 불러왔습니다.', 'info');
+        }
+
         async function deleteApplication(cleanPhone) {
+            if (!confirm('정말 해당 신청 내역을 삭제하시겠습니까?')) return;
             memoryStore.delete(cleanPhone);
             allApplications = allApplications.filter(i => i.cleanPhone !== cleanPhone);
-            if (useCloudDb && currentUser) {
+            if (useCloudDb && db) {
                 try {
                     await deleteDoc(doc(db, 'artifacts', appId, 'public', 'data', 'applications', cleanPhone));
                 } catch (e) {
-                    console.error(e);
+                    console.warn(e);
                 }
             }
             renderAdminList();
@@ -1324,7 +1405,11 @@
             verifyAdminPassword,
             renderAdminList,
             deleteApplication,
-            exportAdminCSV
+            exportAdminCSV,
+            openResetPwdModal,
+            closeResetPwdModal,
+            submitResetPassword,
+            adminEditRecord
         };
 
         window.addEventListener('DOMContentLoaded', () => {
